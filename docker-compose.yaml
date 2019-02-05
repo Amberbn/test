@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  mysql:
+    container_name: mysql
+    image: mariadb:latest
+    privileged: true
+    tty: true
+    ports:
+      - "3360:3306"
+    volumes:
+      - ./docker_storage/dbdata:/var/lib/mysql
+      - /etc/localtime:/etc/localtime
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+      - "MYSQL_DATABASE=test"

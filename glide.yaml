@@ -1,0 +1,22 @@
+package: test
+import:
+- package: github.com/Masterminds/cookoo
+  version: v1.3.0
+- package: github.com/labstack/echo.git
+  version: ^4.0.0
+- package: github.com/labstack/echo
+  subpackages:
+  - engine/standard
+  - middleware
+- package: github.com/labstack/gommon
+  subpackages:
+  - color
+- package: github.com/mattn/go-colorable
+- package: github.com/mattn/go-isatty
+- package: github.com/valyala/fasttemplate
+- package: golang.org/x/crypto
+  subpackages:
+  - acme/autocert
+- package: github.com/go-sql-driver/mysql
+- package: github.com/jinzhu/gorm
+  version: ^1.9.2
